@@ -1,0 +1,12 @@
+declare module '*.json';
+declare module '*.png';
+declare module 'react-redux';
+declare module 'redux';
+declare module 'redux-logger';
+declare module 'react-router-dom';
+declare module 'recharts';
+declare module 'history/createBrowserHistory';
+declare module 'react-bootstrap-table-next';
+declare module 'react-bootstrap-table2-paginator';
+declare module 'react-transition-group';
+declare module 'react-bootstrap-table2-filter';
