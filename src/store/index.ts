@@ -1,27 +1,23 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import logger from 'redux-logger';
 import data from './orders.json';
+import orderReducer from './reducers/newOrder-reducer';
+import ordersInProgressReducer from './reducers/orderInProgress-reducer';
+import currentOrderReducer from './reducers/currentOrder-reducer';
+import ordersReadyReducer from './reducers/readyOrder-reducer';
 
-function orderReducer(state = [], action) {
-  switch (action.type) {
-    case '@@ORDERS/ADD_ORDER': {
-      return [
-        ...state,
-        action.payload.order,
-      ] 
-    }
-    default: return state;
-  }
-}
-const store = createStore(
+const store: any = createStore(
   combineReducers({
     orders: orderReducer,
+    ordersInProgress: ordersInProgressReducer,
+    ordersReady: ordersReadyReducer,
+    currentOrder: currentOrderReducer
   }),
-  applyMiddleware(logger),
-)
+  applyMiddleware(logger)
+);
 
 /* mock of realtime action */
-let timerId = null;
+let timerId: any = null;
 let index = 0;
 
 function getRandom(min = 1, max = 10) {
@@ -31,7 +27,7 @@ function getRandom(min = 1, max = 10) {
   return result * 1000;
 }
 
-function startEvent(delay) {
+function startEvent(delay: any) {
   if (timerId) {
     clearTimeout(timerId);
   }
@@ -42,12 +38,12 @@ function startEvent(delay) {
         order: data[index]
       }
     });
-    if (index < (data.length - 1)) {
+    if (index < data.length - 1) {
       index += 1;
       return startEvent(getRandom());
     }
-    return
-  }, delay)
+    return;
+  }, delay);
 }
 
 startEvent(getRandom());

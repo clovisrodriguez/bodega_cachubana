@@ -1,0 +1,24 @@
+.chart {
+  margin-top: 3rem;
+  background-color: $MineShaft;
+  border-radius: 1rem;
+  text-align: center;
+  color: white;
+  .counter {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .chart-space {
+    display: flex;
+    justify-content: center;
+    background: $Gradient1;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    height: 400px;
+  }
+}
+
+.order-section {
+  margin-top: 4rem;
+}

@@ -1,0 +1,158 @@
+.navbar {
+  background-color: $MineShaft;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  height: 3rem;
+  img {
+    height: 100%;
+  }
+}
+
+.blockquote {
+  background-color: rgba($color: black, $alpha: 0.4);
+  text-align: left;
+  padding: 0.6rem;
+  border-radius: 10px;
+  p {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+
+.table {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.modal {
+  background-color: rgba($color: black, $alpha: 0.4);
+  display: initial;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 1000ms linear;
+  }
+}
+
+.modal {
+  .modal-header {
+    flex-direction: column;
+    padding: 0;
+    .order-id {
+      color: white;
+      background-color: $Citron;
+      padding: 10px 15px;
+      width: 100%;
+      h5 {
+        font-weight: bold;
+      }
+    }
+    .description {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 15px;
+    }
+  }
+  .modal-body {
+    overflow: scroll;
+    max-height: 60vh;
+    overflow-x: hidden;
+    padding: 0;
+    .product {
+      padding: 12px;
+      height: 5rem;
+      cursor: pointer;
+      transition: all ease 0.4;
+      &:hover {
+        background-color: rgba($MineShaft, 0.3);
+      }
+    }
+    .ready {
+      background-color: $Citron;
+      color: white;
+      &:hover {
+        background-color: $BuddhaGold;
+      }
+    }
+  }
+}
+
+.frubana-table {
+  th {
+    background-color: $MineShaft;
+    color: white;
+    cursor: pointer;
+  }
+  tbody {
+    tr {
+      cursor: pointer;
+      &:hover {
+        background-color: rgba($MineShaft, 0.3);
+      }
+    }
+  }
+}
+
+.react-bootstrap-table-pagination {
+  .page-item {
+    a {
+      color: $MineShaft;
+    }
+  }
+  .active {
+    .page-link {
+      background-color: $HotCinnamon;
+      border-color: $HotCinnamon;
+    }
+  }
+}
+
+.card {
+  .card-header {
+    background-color: $MineShaft;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .counter {
+      color: white;
+      vertical-align: middle;
+      background-color: $Citron;
+      padding: 3px 5px;
+      border-radius: 7px;
+      width: 60px;
+      text-align: center;
+    }
+  }
+}
+
+.btn-primary:not(:disabled):not(.disabled).active {
+  background-color: $HotCinnamon;
+}
+
+.btn-primary {
+  background-color: $Citron;
+  transition: all ease 0.4;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: $BuddhaGold;
+  }
+}
+
+.btn-secondary {
+  background-color: $MineShaft;
+}
+
+.btn-link {
+  color: white;
+  &:hover {
+    text-decoration: none;
+    color: $HotCinnamon;
+  }
+}
